@@ -235,3 +235,188 @@ a:hover{
     align-items: flex-start;
   }
 }
+
+/* =========================
+   記事本文（prose）
+========================= */
+.prose{
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.prose p{
+  margin: 0 0 1em;
+}
+
+.prose h2, .prose h3, .prose h4{
+  margin: 1.6em 0 0.6em;
+  line-height: 1.3;
+}
+
+.prose h3{
+  padding-left: 10px;
+  border-left: 4px solid var(--accent);
+}
+
+.prose h4{
+  color: var(--text);
+  opacity: 0.9;
+}
+
+.prose ul, .prose ol{
+  margin: 0 0 1.2em 1.2em;
+}
+
+.prose li{
+  margin: 0.3em 0;
+}
+
+/* 引用 */
+.prose blockquote{
+  margin: 1.2em 0;
+  padding: 12px 14px;
+  background: var(--accent-weak);
+  border-left: 4px solid var(--accent);
+  border-radius: 12px;
+}
+
+/* 区切り線 */
+.prose hr{
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 24px 0;
+}
+
+/* インラインコード */
+.prose code{
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.95em;
+  padding: 0.15em 0.35em;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+}
+
+/* コードブロック */
+.prose pre{
+  margin: 1.2em 0;
+  padding: 14px;
+  overflow: auto;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: #0b1220;
+  color: #e5e7eb;
+}
+.prose pre code{
+  border: none;
+  background: transparent;
+  color: inherit;
+  padding: 0;
+}
+
+/* 画像 */
+.prose img{
+  max-width: 100%;
+  height: auto;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+}
+
+/* 注意/補足ボックス（自作クラス） */
+.note{
+  margin: 1.2em 0;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: #fff;
+}
+.note-title{
+  font-weight: 700;
+  margin: 0 0 6px;
+}
+.note.warn{
+  border-color: rgba(245, 158, 11, 0.35);
+  background: rgba(245, 158, 11, 0.10);
+}
+.note.ok{
+  border-color: rgba(34, 197, 94, 0.35);
+  background: rgba(34, 197, 94, 0.10);
+}
+
+/* =========================
+   目次（TOC）
+========================= */
+.toc{
+  margin: 16px 0 24px;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: #fff;
+}
+
+.toc-title{
+  margin: 0 0 8px;
+  font-weight: 700;
+}
+
+.toc ol{
+  margin: 0;
+  padding-left: 18px;
+}
+
+.toc li{
+  margin: 4px 0;
+}
+
+.toc a{
+  text-decoration: none;
+}
+
+.toc a:hover{
+  text-decoration: underline;
+}
+
+/* ジャンプ時のズレ防止（ヘッダー固定対策） */
+.prose h3, .prose h4{
+  scroll-margin-top: 120px;
+}
+
+html{
+  scroll-padding-top: 120px;
+}
+
+/* =========================
+   一番上に戻るボタン
+========================= */
+#toTop{
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 18px;
+  cursor: pointer;
+
+  display: flex; /* 最初は非表示 */
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+#toTop:hover{
+  transform: translateY(-2px);
+}
+
+/* スマホでは少し大きめ */
+@media (max-width: 900px){
+  #toTop{
+    width: 52px;
+    height: 52px;
+    font-size: 20px;
+  }
+}

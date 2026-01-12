@@ -55,5 +55,18 @@
       <small>© 2026 勇瑠のブログ</small>
     </div>
   </footer>
+  
+    <button id="toTop" aria-label="ページの先頭へ">↑</button>
+
+  <script>
+  const toTop = document.getElementById("toTop");
+
+  toTop.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+  </script>
 </body>
 </html>

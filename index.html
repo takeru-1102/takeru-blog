@@ -12,7 +12,7 @@
     <div class="container header-inner">
       <div>
         <h1 class="site-title">takeru-blog</h1>
-        <p class="site-subtitle">日々の記録<div class=""></div>。</p>
+        <p class="site-subtitle">日々の記録<div class=""></div></p>
       </div>
 
       <nav class="nav">
@@ -32,7 +32,7 @@
         </h3>
         <p class="post-meta">2026-01-12 · 雑記</p>
         <p class="post-excerpt">
-            初めての記事の概要です
+            はじめまして！
         </p>
         <a class="readmore" href="posts/001.html">続きを読む →</a>
       </article>
@@ -75,5 +75,21 @@
       <small>© 2026 勇瑠のブログ</small>
     </div>
   </footer>
+
+    <button id="toTop" aria-label="ページの先頭へ">↑</button>
+
+  <script>
+  const toTop = document.getElementById("toTop");
+
+  toTop.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+  </script>
+
 </body>
+
+
 </html>

@@ -24,8 +24,20 @@
 
   <main class="container" style="padding: 24px 0 48px;">
     <article class="post-card">
-        <h2 class="post-title">はじめまして。自己紹介とこのブログについて</h2>
+        <h2 class="post-title">はじめまして。自己紹介とこのブログについて。</h2>
   <p class="post-meta">2026-01-16 · 雑記</p>
+<div class="prose">
+
+    <nav class="toc">
+  <p class="toc-title">目次</p>
+  <ol>
+    <li><a href="#about-me">自分について</a></li>
+    <li><a href="#about-blog">このブログについて</a></li>
+    <li><a href="#hobbies">好きなこと</a></li>
+  </ol>
+</nav>
+
+<hr>
 
   <p>
     はじめまして。<br>
@@ -33,49 +45,40 @@
     記念すべき最初の記事として、自己紹介を書いてみます。
   </p>
 
-  <h3>自分について</h3>
+  <h3 id="about-me">自分について</h3>
   <p>
-    改めまして、佐々木 勇瑠といいます。<br>
-    現在は大学に通いながら、プログラミングや音楽制作などをしています。
-  </p>
-  <p>
-    まだまだ勉強中ですが、<br>
-    「作りながら覚える」ことが好きで、
-    いろいろ試しながら取り組んでいます。
+    改めまして、たけのこといいます。<br>
+    現在は東京科学大学理工学系情報理工学院数理計算科学系に所属しています。
   </p>
 
-  <h3>このブログについて</h3>
+  <h3 id="about-blog">このブログについて</h3>
   <p>
     このブログは、
-    日々の出来事や制作したもの、勉強した内容を
-    記録するために作りました。
+    日々の出来事を記録するために作りました。
   </p>
   <p>
     最初はHTMLとCSSの練習として始めましたが、
     せっかくなので文章も残していこうと思っています。
   </p>
 
-  <h3>最近やっていること</h3>
+  <h3 id="hobbies">好きなこと</h3>
   <p>
-    最近は、Webサイトを作ったり、
-    音楽を作ったりすることに興味があります。
-  </p>
-  <p>
-    特に、
-    試行錯誤しながら形にしていくことや、
-    少しずつ完成していく過程が好きです。
+    <ul>
+        <li>カービィ</li>
+        <li>バンドリ(MyGO!!!!!やゆめみた、ポピパを推してます)</li>
+        <li>学マス(麻央先輩を推してます)</li>
+    </ul>
   </p>
 
-  <h3>これからのこと</h3>
-  <p>
-    このブログでは、
-    完璧な記事ではなくても、
-    「その時考えたこと」を大切に書いていくつもりです。
-  </p>
+  <hr>
 
   <p>
     これからよろしくお願いします。
   </p>
+
+  <img src="C:\Users\ramik\OneDrive\デスクトップ\takeru-blog\images\screenshot_20250420_180403.png" alt="麻央先輩" />
+
+</div>
 
   <p>
     <a class="readmore" href="../index.html">← 記事一覧へ戻る</a>
@@ -88,5 +91,18 @@
       <small>© 2026 勇瑠のブログ</small>
     </div>
   </footer>
+
+    <button id="toTop" aria-label="ページの先頭へ">↑</button>
+
+  <script>
+  const toTop = document.getElementById("toTop");
+
+  toTop.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+  </script>
 </body>
 </html>
