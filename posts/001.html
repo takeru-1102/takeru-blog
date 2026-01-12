@@ -24,65 +24,59 @@
 
   <main class="container" style="padding: 24px 0 48px;">
     <article class="post-card">
-        <h2 class="post-title">はじめまして。自己紹介とこのブログについて。</h2>
-  <p class="post-meta">2026-01-16 · 雑記</p>
-<div class="prose">
+      <h2 class="post-title">はじめまして。自己紹介とこのブログについて。</h2>
+      <p class="post-meta">2026-01-16 · 雑記</p>
 
-    <nav class="toc">
-  <p class="toc-title">目次</p>
-  <ol>
-    <li><a href="#about-me">自分について</a></li>
-    <li><a href="#about-blog">このブログについて</a></li>
-    <li><a href="#hobbies">好きなこと</a></li>
-  </ol>
-</nav>
+      <div class="prose">
+        <nav class="toc">
+          <p class="toc-title">目次</p>
+          <ol>
+            <li><a href="#about-me">自分について</a></li>
+            <li><a href="#about-blog">このブログについて</a></li>
+            <li><a href="#hobbies">好きなこと</a></li>
+          </ol>
+        </nav>
 
-<hr>
+        <hr>
 
-  <p>
-    はじめまして。<br>
-    このブログを見てくれてありがとうございます。
-    記念すべき最初の記事として、自己紹介を書いてみます。
-  </p>
+        <p>
+          はじめまして。<br>
+          このブログを見てくれてありがとうございます。
+          記念すべき最初の記事として、自己紹介を書いてみます。
+        </p>
 
-  <h3 id="about-me">自分について</h3>
-  <p>
-    改めまして、たけのこといいます。<br>
-    現在は東京科学大学理工学系情報理工学院数理計算科学系に所属しています。
-  </p>
+        <h3 id="about-me">自分について</h3>
+        <p>
+          改めまして、たけのこといいます。<br>
+          現在は東京科学大学理工学系情報理工学院数理計算科学系に所属しています。
+        </p>
 
-  <h3 id="about-blog">このブログについて</h3>
-  <p>
-    このブログは、
-    日々の出来事を記録するために作りました。
-  </p>
-  <p>
-    最初はHTMLとCSSの練習として始めましたが、
-    せっかくなので文章も残していこうと思っています。
-  </p>
+        <h3 id="about-blog">このブログについて</h3>
+        <p>
+          このブログは、日々の出来事を記録するために作りました。
+        </p>
+        <p>
+          最初はHTMLとCSSの練習として始めましたが、
+          せっかくなので文章も残していこうと思っています。
+        </p>
 
-  <h3 id="hobbies">好きなこと</h3>
-  <p>
-    <ul>
-        <li>カービィ</li>
-        <li>バンドリ(MyGO!!!!!やゆめみた、ポピパを推してます)</li>
-        <li>学マス(麻央先輩を推してます)</li>
-    </ul>
-  </p>
+        <h3 id="hobbies">好きなこと</h3>
+        <ul>
+          <li>カービィ</li>
+          <li>バンドリ（MyGO!!!!!や ゆめみた、ポピパを推してます）</li>
+          <li>学マス（麻央先輩を推してます）</li>
+        </ul>
 
-  <hr>
+        <hr>
 
-  <p>
-    これからよろしくお願いします。
-  </p>
+        <p>これからよろしくお願いします。</p>
 
-  <img src="../images/mao-senpai-1.png" alt="麻央先輩" />
+        <img src="../images/mao-senpai-1.png" alt="麻央先輩" />
+      </div>
 
-</div>
-
-  <p>
-    <a class="readmore" href="../index.html">← 記事一覧へ戻る</a>
-  </p>
+      <p>
+        <a class="readmore" href="../index.html">← 記事一覧へ戻る</a>
+      </p>
     </article>
   </main>
 
@@ -92,17 +86,12 @@
     </div>
   </footer>
 
-    <button id="toTop" aria-label="ページの先頭へ">↑</button>
-
+  <button id="toTop" type="button" aria-label="ページの先頭へ">↑</button>
   <script>
-  const toTop = document.getElementById("toTop");
-
-  toTop.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
+    const toTop = document.getElementById("toTop");
+    toTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     });
-  });
   </script>
 </body>
 </html>

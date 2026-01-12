@@ -26,27 +26,29 @@
     <article class="post-card">
       <h2 class="post-title">このブログについて</h2>
 
-      <p>
-        このブログは、日々の雑記や制作ログ、勉強の記録をまとめるために作りました。
-      </p>
+      <div class="prose">
+        <p>
+          このブログは、日々の雑記や制作ログ、勉強の記録をまとめるために作りました。
+        </p>
 
-      <p>
-        音楽制作、ドット絵、プログラミングなど、
-        興味のあることを気楽に書いていく予定です。
-      </p>
+        <p>
+          音楽制作、ドット絵、プログラミングなど、
+          興味のあることを気楽に書いていく予定です。
+        </p>
 
-      <h3>運営者</h3>
-      <p>
-        佐々木 勇瑠<br />
-        東工大生 / 作曲 / ドット絵 / プログラミング
-      </p>
+        <h3>運営者</h3>
+        <p>
+          佐々木 勇瑠<br />
+          東工大生 / 作曲 / ドット絵 / プログラミング
+        </p>
 
-      <h3>このブログの方針</h3>
-      <ul>
-        <li>自分のペースで更新</li>
-        <li>技術メモは後から見返せる形で</li>
-        <li>無理にバズらせない</li>
-      </ul>
+        <h3>このブログの方針</h3>
+        <ul>
+          <li>自分のペースで更新</li>
+          <li>技術メモは後から見返せる形で</li>
+          <li>無理にバズらせない</li>
+        </ul>
+      </div>
     </article>
   </main>
 
@@ -55,18 +57,13 @@
       <small>© 2026 勇瑠のブログ</small>
     </div>
   </footer>
-  
-    <button id="toTop" aria-label="ページの先頭へ">↑</button>
 
+  <button id="toTop" type="button" aria-label="ページの先頭へ">↑</button>
   <script>
-  const toTop = document.getElementById("toTop");
-
-  toTop.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
+    const toTop = document.getElementById("toTop");
+    toTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     });
-  });
   </script>
 </body>
 </html>

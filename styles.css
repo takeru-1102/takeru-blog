@@ -20,8 +20,11 @@
 /* =========================
    全体設定
 ========================= */
-*{
-  box-sizing: border-box;
+*{ box-sizing: border-box; }
+
+html{
+  /* 目次ジャンプでヘッダーに被らないように（少し大きめ） */
+  scroll-padding-top: 160px;
 }
 
 body{
@@ -36,9 +39,7 @@ a{
   color: var(--accent);
   text-decoration: none;
 }
-a:hover{
-  opacity: 0.85;
-}
+a:hover{ opacity: 0.85; }
 
 .container{
   max-width: 900px;
@@ -85,9 +86,7 @@ a:hover{
   color: rgba(248,250,252,0.75);
 }
 
-.site-header a{
-  color: var(--header-text);
-}
+.site-header a{ color: var(--header-text); }
 
 /* ナビ */
 .nav{
@@ -104,9 +103,7 @@ a:hover{
   font-size: 14px;
 }
 
-.nav a:hover{
-  background: rgba(255,255,255,0.15);
-}
+.nav a:hover{ background: rgba(255,255,255,0.15); }
 
 /* =========================
    レイアウト
@@ -153,9 +150,7 @@ a:hover{
   font-size: 14px;
 }
 
-.post-excerpt{
-  margin: 0;
-}
+.post-excerpt{ margin: 0; }
 
 /* 続きを読む */
 .readmore{
@@ -171,9 +166,7 @@ a:hover{
 /* =========================
    サイドバー
 ========================= */
-.sidebar{
-  display: block;
-}
+.sidebar{ display: block; }
 
 .widget{
   background: var(--surface);
@@ -204,9 +197,7 @@ a:hover{
   padding-left: 18px;
 }
 
-.link-list a:hover{
-  text-decoration: underline;
-}
+.link-list a:hover{ text-decoration: underline; }
 
 /* =========================
    Footer
@@ -218,21 +209,22 @@ a:hover{
   border-top: 1px solid rgba(255,255,255,0.08);
 }
 
-.site-footer a{
-  color: var(--footer-text);
-}
+.site-footer a{ color: var(--footer-text); }
 
 /* =========================
    レスポンシブ（スマホ）
 ========================= */
 @media (max-width: 900px){
-  .layout{
-    grid-template-columns: 1fr;
-  }
+  .layout{ grid-template-columns: 1fr; }
 
   .header-inner{
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  html{
+    /* スマホはヘッダーが縦に伸びやすいのでさらに余裕 */
+    scroll-padding-top: 200px;
   }
 }
 
@@ -244,13 +236,12 @@ a:hover{
   line-height: 1.9;
 }
 
-.prose p{
-  margin: 0 0 1em;
-}
+.prose p{ margin: 0 0 1em; }
 
 .prose h2, .prose h3, .prose h4{
   margin: 1.6em 0 0.6em;
   line-height: 1.3;
+  scroll-margin-top: 160px; /* 目次ジャンプ被り対策 */
 }
 
 .prose h3{
@@ -267,9 +258,7 @@ a:hover{
   margin: 0 0 1.2em 1.2em;
 }
 
-.prose li{
-  margin: 0.3em 0;
-}
+.prose li{ margin: 0.3em 0; }
 
 /* 引用 */
 .prose blockquote{
@@ -364,26 +353,12 @@ a:hover{
   padding-left: 18px;
 }
 
-.toc li{
-  margin: 4px 0;
-}
+.toc li{ margin: 4px 0; }
 
 .toc a{
   text-decoration: none;
 }
-
-.toc a:hover{
-  text-decoration: underline;
-}
-
-/* ジャンプ時のズレ防止（ヘッダー固定対策） */
-.prose h3, .prose h4{
-  scroll-margin-top: 120px;
-}
-
-html{
-  scroll-padding-top: 120px;
-}
+.toc a:hover{ text-decoration: underline; }
 
 /* =========================
    一番上に戻るボタン
@@ -401,18 +376,19 @@ html{
   font-size: 18px;
   cursor: pointer;
 
-  display: flex; /* 最初は非表示 */
+  display: flex;
   align-items: center;
   justify-content: center;
 
   box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  z-index: 9999;
+  transition: transform 0.12s ease;
 }
 
 #toTop:hover{
   transform: translateY(-2px);
 }
 
-/* スマホでは少し大きめ */
 @media (max-width: 900px){
   #toTop{
     width: 52px;

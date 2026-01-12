@@ -27,10 +27,12 @@
       <h2 class="post-title">二つ目の記事</h2>
       <p class="post-meta">2026-01-12 · 雑記</p>
 
-      <p>ここに本文を書きます。HTMLだけでも十分それっぽくできます。</p>
+      <div class="prose">
+        <p>ここに本文を書きます。HTMLだけでも十分それっぽくできます。</p>
 
-      <h3>見出し</h3>
-      <p>文章、画像、リンクなどを追加できます。</p>
+        <h3>見出し</h3>
+        <p>文章、画像、リンクなどを追加できます。</p>
+      </div>
 
       <p>
         <a class="readmore" href="../index.html">← 記事一覧へ戻る</a>
@@ -44,17 +46,12 @@
     </div>
   </footer>
 
-    <button id="toTop" aria-label="ページの先頭へ">↑</button>
-
+  <button id="toTop" type="button" aria-label="ページの先頭へ">↑</button>
   <script>
-  const toTop = document.getElementById("toTop");
-
-  toTop.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
+    const toTop = document.getElementById("toTop");
+    toTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     });
-  });
   </script>
 </body>
 </html>

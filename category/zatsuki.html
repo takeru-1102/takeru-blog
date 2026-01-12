@@ -6,6 +6,7 @@
   <title>雑記 - takeru-blog</title>
   <link rel="stylesheet" href="../styles.css" />
 </head>
+
 <body>
   <header class="site-header">
     <div class="container header-inner">
@@ -13,8 +14,10 @@
         <h1 class="site-title"><a href="../index.html">takeru-blog</a></h1>
         <p class="site-subtitle">日々の記録</p>
       </div>
+
       <nav class="nav">
         <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
       </nav>
     </div>
   </header>
@@ -27,6 +30,7 @@
         <h3 class="post-title"><a href="../posts/001.html">はじめての記事</a></h3>
         <p class="post-meta">2026-01-12 · 雑記</p>
         <p class="post-excerpt">これはサンプルの記事です。</p>
+        <a class="readmore" href="../posts/001.html">続きを読む →</a>
       </article>
     </section>
 
@@ -48,17 +52,12 @@
     </div>
   </footer>
 
-    <button id="toTop" aria-label="ページの先頭へ">↑</button>
-
+  <button id="toTop" type="button" aria-label="ページの先頭へ">↑</button>
   <script>
-  const toTop = document.getElementById("toTop");
-
-  toTop.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
+    const toTop = document.getElementById("toTop");
+    toTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     });
-  });
   </script>
 </body>
 </html>

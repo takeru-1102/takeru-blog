@@ -12,7 +12,7 @@
     <div class="container header-inner">
       <div>
         <h1 class="site-title">takeru-blog</h1>
-        <p class="site-subtitle">日々の記録<div class=""></div></p>
+        <p class="site-subtitle">日々の記録</p>
       </div>
 
       <nav class="nav">
@@ -31,22 +31,18 @@
           <a href="posts/001.html">はじめての記事</a>
         </h3>
         <p class="post-meta">2026-01-12 · 雑記</p>
-        <p class="post-excerpt">
-            はじめまして！
-        </p>
+        <p class="post-excerpt">はじめまして！</p>
         <a class="readmore" href="posts/001.html">続きを読む →</a>
       </article>
 
       <article class="post-card">
         <h3 class="post-title">
-            <a href="posts/002.html">2つ目の記事</a>
+          <a href="posts/002.html">2つ目の記事</a>
         </h3>
         <p class="post-meta">2026-01-13 · 制作ログ</p>
-        <p class="post-excerpt">
-            2つ目の記事の概要です。
-        </p>
+        <p class="post-excerpt">2つ目の記事の概要です。</p>
         <a class="readmore" href="posts/002.html">続きを読む →</a>
-    </article>
+      </article>
 
       <!-- 記事が増えたら、上の post-card をコピペして追加 -->
     </section>
@@ -66,7 +62,6 @@
           <li><a href="category/study.html">勉強</a></li>
         </ul>
       </div>
-
     </aside>
   </main>
 
@@ -76,20 +71,12 @@
     </div>
   </footer>
 
-    <button id="toTop" aria-label="ページの先頭へ">↑</button>
-
+  <button id="toTop" type="button" aria-label="ページの先頭へ">↑</button>
   <script>
-  const toTop = document.getElementById("toTop");
-
-  toTop.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
+    const toTop = document.getElementById("toTop");
+    toTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     });
-  });
   </script>
-
 </body>
-
-
 </html>
