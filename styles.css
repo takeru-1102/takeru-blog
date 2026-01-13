@@ -307,8 +307,9 @@ a:hover{ opacity: 0.85; }
 .prose img{
   max-width: 100%;
   height: auto;
-  border-radius: 14px;
-  border: 1px solid var(--border);
+  max-width: 640px;
+  margin: 16px auto;
+  display: block;
 }
 
 /* 注意/補足ボックス（自作クラス） */
